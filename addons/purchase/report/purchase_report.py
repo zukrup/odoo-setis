@@ -154,6 +154,17 @@ class PurchaseReport(models.Model):
             """,
         )
 
+    def _get_active_record_id(self):
+        """Get the active record ID from the context."""
+        return self.env.context.get('active_id') or self.env.context.get('active_ids', [False])[0]
+
+    def report_action(self, data=None):
+        """Override to include active record ID in the context."""
+        if not data:
+            data = {}
+        data['active_id'] = self._get_active_record_id()
+        return super().report_action(data)
+
     def _read_group_select(self, aggregate_spec: str, query: Query) -> SQL:
         """ This override allows us to correctly calculate the average price of products. """
         if aggregate_spec != 'price_average:avg':

@@ -1265,3 +1265,7 @@ class PurchaseOrder(models.Model):
 
     def _get_edi_builders(self):
         return []
+
+    def print_auto_pdf(self):
+        """Dummy method for JS print button. Does nothing."""
+        pass

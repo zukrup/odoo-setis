@@ -48,6 +48,7 @@
             'purchase/static/src/js/tours/purchase.js',
             'purchase/static/src/js/tours/purchase_steps.js',
             'purchase/static/src/**/*.xml',
+            'purchase/static/src/js/print_auto_pdf.js',
         ],
         'web.assets_frontend': [
             'purchase/static/src/js/purchase_datetimepicker.js',

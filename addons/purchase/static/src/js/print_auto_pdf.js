@@ -33,7 +33,6 @@ window.addEventListener('click', function(e) {
                 printWindow.onload = function() {
                     console.log('[print_auto_pdf] PDF window loaded');
                     printWindow.focus();
-                    printWindow.print();
                 };
             } else {
                 alert('Popup blocked. Please allow popups for this site.');

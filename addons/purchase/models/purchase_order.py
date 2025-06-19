@@ -1267,5 +1267,7 @@ class PurchaseOrder(models.Model):
         return []
 
     def print_auto_pdf(self):
+        ir_model_data = self.env['ir.model.data']
+        print(ir_model_data)
         """Dummy method for JS print button. Does nothing."""
         pass

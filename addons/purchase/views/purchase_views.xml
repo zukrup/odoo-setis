@@ -148,7 +148,7 @@
                     <button name="button_cancel" invisible="state not in ('draft', 'to approve', 'sent', 'purchase')" string="Cancel" type="object" data-hotkey="x" />
                     <button name="button_done" type="object" string="Lock" invisible="state != 'purchase'" data-hotkey="l"/>
                     <button name="button_unlock" type="object" string="Unlock" invisible="state != 'done'" groups="purchase.group_purchase_manager" data-hotkey="l"/>
-                    <button type="object" name="print_auto_pdf" class="oe_highlight o_print_auto_pdf" string="Print Auto Print PDF"/>
+                    <button type="object" name="print_auto_pdf" class="oe_highlight o_print_auto_pdf" string="Print Auto Print PDF" />
                 </header>
                 <sheet>
                     <div class="oe_button_box" name="button_box">
@@ -175,6 +175,9 @@
                         <h1 class="d-flex">
                             <field name="priority" widget="priority" class="me-3"/>
                             <field name="name" readonly="1"/>
+                            <div id="o_hidden_order_id_wrapper" class="d-none">
+                                <field name="id" readonly="1" class="me-3"/>
+                            </div>
                         </h1>
                     </div>
                     <group>
